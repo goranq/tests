@@ -24,3 +24,5 @@ sudo service mysql restart
 mysql -u $DATABASE_MYSQL_USERNAME -p$DATABASE_MYSQL_PASSWORD -e "SET GLOBAL innodb_file_per_table=1, innodb_file_format=Barracuda, innodb_large_prefix=1;"
 mysql -u $DATABASE_MYSQL_USERNAME -p$DATABASE_MYSQL_PASSWORD -e "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';"
 mysql -u $DATABASE_MYSQL_USERNAME -p$DATABASE_MYSQL_PASSWORD -e "SELECT @@innodb_file_per_table, @@innodb_file_format;"
+mysql -u $DATABASE_MYSQL_USERNAME -p$DATABASE_MYSQL_PASSWORD -e "SHOW VARIABLES WHERE Variable_name LIKE 'innodb_large_prefix%' OR Variable_name LIKE 'innodb_default_row_format%';"
+
