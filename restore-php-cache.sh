@@ -7,7 +7,7 @@ php_cache_archive="$SEMAPHORE_CACHE_DIR/php-cache.tar.gz"
 if [ -e $php_cache_archive ]; then
   echo "Restoring php installation cache..."
   tar -xf $php_cache_archive -C $SEMAPHORE_CACHE_DIR
-  cp -r $SEMAPHORE_CACHE_DIR/php-$php_ver ~/.phpbrew/build/php-$php_ver/
+  cp -r $SEMAPHORE_CACHE_DIR/php-$php_ver ~/.phpbrew/build
   echo "Php installation cache restored."
 else
   echo "Cacheed php installation not found, compiling php..."
