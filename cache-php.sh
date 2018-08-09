@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 php_ver=${1:-'7.2.7'}
-php_dir="~/.phpbrew/build/php-$php_ver/"
+php_dir="php-$php_ver"
 php_path="$SEMAPHORE_CACHE_DIR/$php_dir"
 php_archive="$SEMAPHORE_CACHE_DIR/php-cache.tar.gz"
 
@@ -12,7 +12,7 @@ if [ -d $php_path ]; then
   echo "Creating new archive ..."
   tar -czf $php_archive -C $SEMAPHORE_CACHE_DIR $php_dir
 
-  echo "Removing uncompressed assets..."
+  echo "Removing php dir..."
   rm -rf $php_path
 
   echo "Done."
