@@ -19,4 +19,6 @@ else
   sudo make
   sudo make install
   echo "Compile complete."
+  
+  cp -r ~/.phpbrew/build/php-$php_ver/ $SEMAPHORE_CACHE_DIR/php-$php_ver
 fi
