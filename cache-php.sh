@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+php_ver=${1:-'7.2.7'}
 php_dir="php-$php_ver"
 php_path="$SEMAPHORE_CACHE_DIR/$php_dir"
 php_archive="$SEMAPHORE_CACHE_DIR/php-cache.tar.gz"
