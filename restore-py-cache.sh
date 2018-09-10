@@ -26,6 +26,9 @@ else
   sudo apt-get install -y libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdm-dev libc6-dev libbz2-dev zlib1g-dev openssl libffi-dev python3-dev python3-setuptools wget
 
   pyenv install $py_ver
+  
+  rm -rf $SEMAPHORE_CACHE_DIR/py$py_ver
+  cp -r ~/.pyenv/versions/py$py_ver $SEMAPHORE_CACHE_DIR/py$php_ver
 fi
 
 pyenv global $py_ver
