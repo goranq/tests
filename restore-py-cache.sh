@@ -28,7 +28,7 @@ else
   pyenv install $py_ver
   
   rm -rf $SEMAPHORE_CACHE_DIR/py$py_ver
-  cp -r ~/.pyenv/versions/$py_ver $SEMAPHORE_CACHE_DIR/py$php_ver
+  cp -r ~/.pyenv/versions/$py_ver $SEMAPHORE_CACHE_DIR/py$py_ver
 fi
 
 pyenv global $py_ver
