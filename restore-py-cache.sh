@@ -17,7 +17,8 @@ if [ -e $py_cache_archive ]; then
   echo "Restoring Python $py_ver installation cache..."
   tar -xf $py_cache_archive -C $SEMAPHORE_CACHE_DIR
   rm -rf ~/.pyenv/versions/$py_ver
-  cp -r $SEMAPHORE_CACHE_DIR/py$py_ver ~/.pyenv/versions
+  mkdir ~/.pyenv/versions/$py_ver
+  cp -r $SEMAPHORE_CACHE_DIR/py$py_ver/* ~/.pyenv/versions/$py_ver/
   echo "Python $py_ver installation cache restored."
 else
   echo "Cacheed Python $py_ver installation not found, downloading..."
