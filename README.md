@@ -8,6 +8,3 @@
 999
 111
 222
-333
-Test from boxbox
-Test from SemaphoreCI
