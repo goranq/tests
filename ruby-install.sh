@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+set -x
 
 ruby_version=${1:-"2.5.3"}
 gem_version=${2:-"2.7.7"}
