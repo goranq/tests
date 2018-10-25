@@ -26,7 +26,7 @@ then
   source ~/.bashrc
 fi
 
-if [ 0 -lt $(gem list | grep semaphore_test_boosters | wc -l) ]
+if [ ! 0 -eq $(gem list | grep semaphore_test_boosters | wc -l) ]
 then
   $semaphore_test_boosters="yes"
 fi
